@@ -56,47 +56,6 @@
                 <h1 class="hero-title ">Эффективные решения для вашего бизнеса</h1>
                 <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
             </div>
-
-            <form class="form">
-                <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
-                <div class="form-field">
-                    <label for="name" class="form-label">Имя</label>
-                    <input type="text" class="form-input" name="name" id="name"/>
-                    <svg class="form-pericon-svg icon">
-                        <use href="./images/sprite.svg#icon-person"></use>
-                    </svg>
-                </div>
-                <div class="form-field">
-                    <label for="tel" class="form-label">Телефон</label>
-                    <input type="tel" class="form-input" name="tel" id="tel"> 
-                    <svg class="form-phone-svg icon">
-                        <use href="./images/sprite.svg#icon-phone"></use>
-                    </svg>
-                </div>
-                <div class="form-field">
-                    <label for="email" class="form-label">Почта</label>
-                    <input type="email" class="form-input" name="email" id="email">
-                    <svg class="form-email-svg icon">
-                        <use href="./images/sprite.svg#icon-email"></use>
-                    </svg>
-                </div>
-                <div>
-                    <label>Комментарий</label>
-                    <textarea placeholder="Введите текст" resize="none">
-                    </textarea>
-                </div>
-                <ul>
-                    <li>
-                        <input class="checkbox" name="checkbox">
-                           <label>Соглашаюсь с рассылкой и принимаю 
-                           <a href="">Условия договора</a>
-                           </label>
-                    </li>
-                </ul
-
-                <button type="submit">Отправить</button>
-
-            </form>
         </section>
         
         
@@ -410,6 +369,7 @@
         </div>
     </footer>
 
+    <!--MODAL-->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="close-btn" data-modal-close>
@@ -417,6 +377,42 @@
                     <use href="./images/sprite.svg#icon-close"></use>
                 </svg>
             </button>
+            <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <form class="form">
+                <div class="form-field">
+                    <label for="name" class="form-label">Имя</label>
+                    <input type="text" class="form-input" name="name" minlength="2" id="name"/>
+                    <svg class="form-pericon-svg icon">
+                        <use href="./images/sprite.svg#icon-person"></use>
+                    </svg>
+                </div>
+                <div class="form-field">
+                    <label for="tel" class="form-label">Телефон</label>
+                    <input type="tel" class="form-input" name="tel" id="tel"> 
+                    <svg class="form-phone-svg icon">
+                        <use href="./images/sprite.svg#icon-phone"></use>
+                    </svg>
+                </div>
+                <div class="form-field">
+                    <label for="email" class="form-label">Почта</label>
+                    <input type="email" class="form-input" name="email" id="email">
+                    <svg class="form-email-svg icon">
+                        <use href="./images/sprite.svg#icon-email"></use>
+                    </svg>
+                </div>
+                <div class="form-field">
+                    <label for="message" class="form-label">Комментарий</label>
+                    <textarea name="message" class="form-coment" placeholder="Введите текст">
+                    </textarea>
+                </div>
+                <div class="form-chekbox">
+                    <input type="checkbox" class="checkbox" name="checkbox" id="agreement-checkbox">
+                    <label for="agreement-checkbox" class="label-checkbox">Соглашаюсь с рассылкой и принимаю 
+                        <a href="">Условия договора</a>
+                    </label>
+                </div>
+                <button type="submit" class="button-submit">Отправить</button>
+            </form>
         </div>
     </div>
 
