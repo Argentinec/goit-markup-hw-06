@@ -333,6 +333,7 @@
                 </ul>
             </address>
             </div>
+            <!--SOCIAL-FOOTER-->
             <div class="social-footer">
                 <h3 class="social-title">Присоединяйтесь</h3>
                 <ul class="social-footer-list list">
@@ -365,6 +366,22 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <!--MAILING-->
+            <div class="mailing">
+                <h3 class="mailing-title">Подпишитесь на рассылку</h3>
+                <form class="form-mailing" >
+                     <div class="mail-field">
+                         <label for="email-mailing" class="mailing-label"></label>
+                         <input type="email" class="mailing-input" name="email-mailing" id="email-mailing" placeholder="E-mail">
+                     </div>
+                     <div class="button-send">
+                        <button type="submit" class="mailing-button">Подписаться</button>
+                        <svg class="send">
+                            <use href="./images/sprite.svg#icon-send"></use>
+                        </svg>
+                     </div>
+                </form>
             </div>
         </div>
     </footer>
@@ -401,14 +418,14 @@
                     </svg>
                 </div>
                 <div class="form-field">
-                    <label for="message" class="form-label">Комментарий</label>
+                    <label for="message" class="form-label ">Комментарий</label>
                     <textarea name="message" class="form-coment" placeholder="Введите текст">
                     </textarea>
                 </div>
                 <div class="form-chekbox">
-                    <input type="checkbox" class="checkbox" name="checkbox" id="agreement-checkbox">
+                    <input type="checkbox" class="checkbox visually-hidden" name="checkbox" id="agreement-checkbox">
                     <label for="agreement-checkbox" class="label-checkbox">Соглашаюсь с рассылкой и принимаю 
-                        <a href="">Условия договора</a>
+                        <a href="#">Условия договора</a>
                     </label>
                 </div>
                 <button type="submit" class="button-submit">Отправить</button>

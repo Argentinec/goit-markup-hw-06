@@ -344,8 +344,9 @@ letter-spacing: 0.03em;
 }
 
 .form-input {
-    width: 448px;
+    width: 100%;
     height: 40px;
+    padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
@@ -365,6 +366,7 @@ letter-spacing: 0.03em;
 .form-field:focus-within .form-input {
     border: 1px solid #2196F3;
 }
+
 
 
 
@@ -403,39 +405,68 @@ letter-spacing: 0.03em;
 }
 
 
+.form-field:focus-within .form-coment {
+    border: 1px solid #2196F3;
+}
+
 
 
 .form-chekbox {
     margin-top: 20px;
-    margin-right: 52px;
+    margin-right: 51px;
     margin-left: 52px;
     margin-bottom: 30px;
 
 }
 
 
-.checkbox {
-    width: 16px;
-    height: 15px;
-    border: 1 px solid #212121;
-}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
 
 
 .label-checkbox {
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 14px;
-    line-height: 1,714;
+    line-height: 1.714;
     letter-spacing: 0.03em;
     color: #757575;
 }
+
+.label-checkbox::before {
+    display: inline-block;
+    content:"";
+    width: 16px;
+    height: 15px;
+    outline: solid 1px #212121;
+    margin-right: 8px;
+}
+
+.checkbox:checked + .label-checkbox::before {
+    background-color: #2196F3;
+    background-image: url(../images/form/icon-check.svg);
+    outline: solid 1px var(--accent-color);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
 
 .button-submit {
     display: inline-block;
     margin-right: 164px;
     margin-left: 164px;
     margin-bottom: 40px;
-    padding 10px 55px;
+    padding: 10 55;
 
     font-style: var(--accent-color);
     font-weight: 700;
@@ -845,8 +876,87 @@ color: rgba(255, 255, 255, 0.6);
     background-color: var(--accent-color);
 }
 
+.mailing {
+    padding-top: 72px;
+    padding-bottom: 94px;
+    margin-left: auto;
+
+}
+
+.mailing-title {
+    display: block;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-bottom: 20px;
+}
+
+.form-mailing {
+    display: flex;
+    align-content: center;
+    
+}
 
 
+
+.mail-field{
+    margin-right: 12px;
+}
+
+
+.mailing-input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 16px 15px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    
+}
+
+
+.mailing-button {
+    display: flex;
+    align-items: center;
+    padding-left: 29px;
+    width: 200px;
+    height: 50px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875px;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+
+.button-send {
+    position: relative;
+    
+}
+
+
+.send {
+    position: absolute;
+    top: 13px;
+    right: 28px;
+    width: 24px;
+    height: 24px;
+}
 
 /*----------END FOOTER-----------*/
 
